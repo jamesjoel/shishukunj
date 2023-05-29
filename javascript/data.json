@@ -1,0 +1,24 @@
+{
+    "student" : [
+        {
+            "name" : "amar",
+            "age" : 25,
+            "city" : "indore"
+        },
+        {
+            "name" : "jaya",
+            "age" : 21,
+            "city" : "mumbai"
+        },
+        {
+            "name" : "vijay",
+            "age" : 18,
+            "city" : "pune"
+        },
+        {
+            "name" : "gaurav",
+            "age" : 24,
+            "city" : "indore"
+        }
+    ]
+}

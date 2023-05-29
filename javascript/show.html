@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+        <script>
+            axios.get("http://localhost:3000/questions").then(function(result){
+                console.log(result.data)
+            })
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
+
+<!-- 
+
+    1.  node -v
+        npm install -g json-server 
+
+    2. make a json file que.json
+
+    {
+        "questions" : [
+            {
+                "queno" : 1,
+                "que" : "what is the capital ?",
+                "ans1" : "mumbai",
+                "ans2" : "delhi",
+                "ans3" : "indore",
+                "ans4" : "pune",
+                "correctans: "ans2"
+            }
+        ]
+    }
+
+
+    3. 
+
+
+ -->
