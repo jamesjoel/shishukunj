@@ -1,0 +1,90 @@
+<!-- 
+    npm i -g json-server
+ -->
+
+ <html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+        <script src="js/bootstrap.bundle.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+        <script>
+            function add()
+            {
+                var que = document.getElementById("que").value;
+                var a = document.getElementById("ansA").value;
+                var b = document.getElementById("ansB").value;
+                var c = document.getElementById("ansC").value;
+                var d = document.getElementById("ansD").value;
+
+                var correct = document.getElementById("correct").value;
+
+                var obj = {
+                    que : que,
+                    andA : a,
+                    andB : b,
+                    andC : c,
+                    andD : d,
+                    correct : correct
+                }
+
+
+                axios.post("http://localhost:3000/quiz", obj);
+
+                document.getElementById("que").value="";
+                document.getElementById("ansA").value="";
+                document.getElementById("ansB").value="";
+                document.getElementById("ansC").value="";
+                document.getElementById("ansD").value="";
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container-fluid bg-dark" style="height: 100px;"></div>
+        <br />
+        <br />
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="card">
+                        <div class="card-header bg-info"><h4>Question 1</h4></div>
+                        <div class="card-body">
+                            <p><b>Que : <input type="text" id="que" class="form-control"/></b></p>
+                           
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>Ans A :<input type="text" id="ansA" name="ans" class="form-control"/> </p>
+                                    
+                                    
+                                    <p>Ans B :<input id="ansB"  type="text" name="ans" class="form-control"/> </p>
+                                    <br />
+                                </div>
+                                <div class="col-md-6">
+                                    <p>Ans C:<input id="ansC" type="text" name="ans" class="form-control"/> </p>
+                                    
+                                    
+                                    <p>Ans D :<input id="ansD" type="text" name="ans" class="form-control"/> </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8 offset-md-2">
+                                    <p>Correct Ans :<select class="form-control" id="correct">
+                                        <option>Select</option>
+                                        <option>A</option>
+                                        <option>B</option>
+                                        <option>C</option>
+                                        <option>D</option>
+                                    </select> </p>
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button onclick="add()" class="btn btn-primary">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+ </html>

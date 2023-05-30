@@ -1,0 +1,52 @@
+<!-- 
+    npm i -g json-server
+ -->
+
+ <html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+        <script src="js/bootstrap.bundle.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+        <script>
+            axios.get("http://localhost:3000/quiz").then(function(result){
+                // console.log(result.data);
+                var quiz = result.data;
+            })
+        </script>
+    </head>
+    <body>
+        <div class="container-fluid bg-dark" style="height: 100px;"></div>
+        <br />
+        <br />
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="card">
+                        <div class="card-header bg-info"><h4>Question 1</h4></div>
+                        <div class="card-body">
+                            <p><b>Que : Hundred year war was fought between ?</b></p>
+                            <br />
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p><input type="radio" name="ans" /> Ans A. : France and England</p>
+                                    <br />
+                                    
+                                    <p><input type="radio" name="ans" /> Ans B. : France and India</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><input type="radio" name="ans" /> Ans C. : India and England</p>
+                                    <br />
+                                    
+                                    <p><input type="radio" name="ans" /> Ans Ds. : India and Pakistan</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+ </html>

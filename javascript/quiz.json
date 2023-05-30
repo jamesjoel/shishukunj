@@ -1,0 +1,58 @@
+{
+  "quiz": [
+    {
+      "id": 1,
+      "que": "Which country gifted the Statue of Liberty to USA? ",
+      "ansA": "Germany",
+      "ansB": "France",
+      "ansC": "England",
+      "ansD": "India",
+      "correct": "ansB"
+    },
+    {
+      "id": 2,
+      "que": "India became a member of the United Nations in",
+      "ansA": "1940",
+      "ansB": "1945",
+      "ansC": "1950",
+      "ansD": "1985",
+      "correct": "ansB"
+    },
+    {
+      "id": 3,
+      "que": "Hundred year war was fought between",
+      "ansA": "France and England",
+      "ansB": "France and India",
+      "ansC": "India and England",
+      "ansD": "India and Pakistan",
+      "correct": "ansA"
+    },
+    {
+      "que": "When is International Wetland Day celebrated every year?",
+      "andA": "1 February",
+      "andB": "2 February",
+      "andC": "3 February",
+      "andD": "4 February",
+      "correct": "B",
+      "id": 4
+    },
+    {
+      "que": "Who has become the first woman Chief Justice of Pakistan?",
+      "andA": "Syeda Tahira Safdar",
+      "andB": "Hasina Simba",
+      "andC": "Rajni Kalra",
+      "andD": "Razia Hamida",
+      "correct": "A",
+      "id": 5
+    },
+    {
+      "que": "Which of the following countries was formerly known as Nippon?",
+      "andA": "China",
+      "andB": "Japan",
+      "andC": "Sri Lanka",
+      "andD": "Vietnam",
+      "correct": "B",
+      "id": 6
+    }
+  ]
+}
