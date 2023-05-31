@@ -1,0 +1,184 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "que": "what is the capital of india: ",
+            "ans1:": "mumbai",
+            "ans2:": "delhi",
+            "ans3:": "indore",
+            "ans4:": "chennai",
+            "correct": "ans2"
+        },
+        {
+            "id": 2,
+            "que": "what is the capital of madhya pradesh: ",
+            "ans1:": "gwalior",
+            "ans2:": "kolkata",
+            "ans3:": "indore",
+            "ans4:": "bhopal",
+            "correct": "ans4"
+        },
+        {
+            "id": 3,
+            "que": "which color is not in India's flag: ",
+            "ans1:": "saffron",
+            "ans2:": "green",
+            "ans3:": "white",
+            "ans4:": "purple",
+            "correct": "ans4"
+        },
+        {
+            "id": 4,
+            "que": "which country was not part of the allies during WW2: ",
+            "ans1:": "germany",
+            "ans2:": "USA",
+            "ans3:": "UK",
+            "ans4:": "France",
+            "correct": "ans1"
+        },
+        {
+            "id": 5,
+            "que": "which is the national sport of India: ",
+            "ans1:": "basketball",
+            "ans2:": "football",
+            "ans3:": "hockey",
+            "ans4:": "cricket",
+            "correct": "ans3"
+        },
+        {
+            "id": 6,
+            "que": "What is the pH of human body: ",
+            "ans1:": "9.2-9.6",
+            "ans2:": "7.0-7.2",
+            "ans3:": "6.1-6.3",
+            "ans4:": "5.4-5.6",
+            "correct": "ans2"
+        },
+        {
+            "id": 7,
+            "que": "Which of the given cities is on the bank of river Ganga: ",
+            "ans1:": "Patna",
+            "ans2:": "Gwalior",
+            "ans3:": "Bhopal",
+            "ans4:": "Mathura",
+            "correct": "ans4"
+        },
+        {
+            "id": 8,
+            "que": "Which of the given compounds is used to make fireproof clothing?: ",
+            "ans1:": "Aluminum chloride",
+            "ans2:": "Aluminum Sulphate",
+            "ans3:": "Magnesium Chloride",
+            "ans4:": "Magnesium Sulphate",
+            "correct": "ans2"
+        },
+        {
+            "id": 9,
+            "que": "Which of the given bio transformations gives maximum energy to the human body?",
+            "ans1": "AMP-ADP",
+            "ans2": "ADP-ATP",
+            "ans3": "ACP-AMP",
+            "ans4": "AMP-ATP",
+            "correct": "ans2"
+        },
+        {
+            "id": 10,
+            "que": "Where is Lomus Rishi Cave located?",
+            "ans1": "Nasik",
+            "ans2": "Gaya",
+            "ans3": "Varanasi",
+            "ans4": "Bhubaneswar",
+            "correct": "ans2"
+        },
+        {
+            "id": 11,
+            "que": "Musi is a tributary of which of the given rivers?",
+            "ans1": "Ganga",
+            "ans2": "Krishna",
+            "ans3": "Kaveri",
+            "ans4": "Chambal",
+            "correct": "ans2"
+        },
+        {
+            "id": 12,
+            "que": "How many goals are added in Sustainable Developments Goals adopted by the UN?",
+            "ans1": "18",
+            "ans2": "17",
+            "ans3": "20",
+            "ans4": "21",
+            "correct": "ans2"
+        },
+        {
+            "id": 13,
+            "que": "Who among the following nations is not a member of BRICS?",
+            "ans1": "India",
+            "ans2": "India",
+            "ans3": "Russia",
+            "ans4": "Japan",
+            "correct": "ans4"
+        },
+        {
+            "id": 14,
+            "que": "The tomb of a Sufi Saint is known as",
+            "ans1": "Idgah",
+            "ans2": "Masjid",
+            "ans3": "Dargah",
+            "ans4": "None of these",
+            "correct": "ans3"
+        },
+        {
+            "id": 15,
+            "que": "The Instrument Wind vane is used for measuring.",
+            "ans1": "Atmospheric pressure",
+            "ans2": "Velocity of Air",
+            "ans3": "Direction of Wind",
+            "ans4": "Air pressure",
+            "correct": "ans3"
+        },
+        {
+            "id": 16,
+            "que": "Who Invented the 3-D printer?",
+            "ans1": "Nick Holonyak",
+            "ans2": "Elias Howe",
+            "ans3": "Chuck Hull",
+            "ans4": "Christiaan Huygens",
+            "correct": "ans3"
+        },
+        {
+            "id": 17,
+            "que": "Who was court poet of Samudragupta?",
+            "ans1": "Chand Bardai",
+            "ans2": "Bhavabhuti",
+            "ans3": "Banabhatta",
+            "ans4": "Harishen",
+            "correct": "ans4"
+        },
+        {
+            "id": 18,
+            "que": "Couple burial was found in which of the following Harappan sites?",
+            "ans1": "Chanhudado",
+            "ans2": "Lothal",
+            "ans3": "Mohenjodaro",
+            "ans4": "Harappa",
+            "correct": "ans2"
+        },
+        {
+            "id": 19,
+            "que": "What does 'Triratna' mean in Buddhism? ",
+            "ans1": "Satya, Ahimsa, Karuna",
+            "ans2": "Sheel, Samadhi, Sangha",
+            "ans3": "Tripitaka",
+            "ans4": "Buddha, Dhamma (dharma), Sangha",
+            "correct": "ans4"
+        },
+        {
+            "id": 20,
+            "que": "When is World Children’s Day observed?",
+            "ans1": "16th November",
+            "ans2": "17th November",
+            "ans3": "18th November",
+            "ans4": "20th November",
+            "correct": "ans4"
+        }
+    ]
+}

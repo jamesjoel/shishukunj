@@ -8,10 +8,85 @@
         <script src="js/bootstrap.bundle.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
         <script>
-            axios.get("http://localhost:3000/quiz").then(function(result){
-                // console.log(result.data);
+            var count = 0;
+            var randarr = [];
+            var ansarr= [];
+
+            async function getdata()
+            {
+                var result = await axios.get("http://localhost:3000/questions");
                 var quiz = result.data;
-            })
+                
+                
+                
+                for(var i=1; i<=5; i++){
+                    var rand = Math.floor(Math.random()*20)
+                    
+                    var que = quiz.find(obj=>obj.id == rand)
+                
+                    randarr.push(que);
+                }
+                
+                var obj = randarr[count];
+
+                console.log(obj);
+
+                document.getElementById("que").innerHTML = obj.que;
+                document.getElementById("ans1").innerHTML = obj.ans1;
+                document.getElementById("ans2").innerHTML = obj.ans2;
+                document.getElementById("ans3").innerHTML = obj.ans2;
+                document.getElementById("ans4").innerHTML = obj.ans4;
+
+                document.getElementById("show_que_num").innerHTML = count+1;
+                
+            }
+
+            getdata();
+            
+
+            function getans()
+            {
+                count++;
+                console.log(count)
+
+
+                var obj = randarr[count];
+                document.getElementById("que").innerHTML = obj.que;
+                document.getElementById("ans1").innerHTML = obj.ans1;
+                document.getElementById("ans2").innerHTML = obj.ans2;
+                document.getElementById("ans3").innerHTML = obj.ans2;
+                document.getElementById("ans4").innerHTML = obj.ans4;
+
+                
+                
+                if(document.getElementById("radio_ans1").checked){
+                    
+                    ansarr.push("ans1");
+                }
+                if(document.getElementById("radio_ans2").checked){
+                    
+                    ansarr.push("ans2");
+                }
+                if(document.getElementById("radio_ans3").checked){
+                    
+                    ansarr.push("ans3");
+                }
+                if(document.getElementById("radio_ans4").checked){
+                    
+                    ansarr.push("ans4");
+                }
+
+
+                document.getElementById("radio_ans1").checked = false;
+                document.getElementById("radio_ans2").checked = false;
+                document.getElementById("radio_ans3").checked = false;
+                document.getElementById("radio_ans4").checked = false;
+                document.getElementById("show_que_num").innerHTML = count+1;
+
+            }
+           
+          
+
         </script>
     </head>
     <body>
@@ -22,31 +97,34 @@
             <div class="row">
                 <div class="col-md-8 offset-md-2">
                     <div class="card">
-                        <div class="card-header bg-info"><h4>Question 1</h4></div>
+                        <div class="card-header bg-info"><h4>Question <span id="show_que_num">1</span></h4></div>
                         <div class="card-body">
-                            <p><b>Que : Hundred year war was fought between ?</b></p>
+                            <p><b>Que : <span id="que"></span></b></p>
                             <br />
                             <div class="row">
                                 <div class="col-md-6">
-                                    <p><input type="radio" name="ans" /> Ans A. : France and England</p>
+                                    <p><input type="radio" id="radio_ans1" name="ans" value="ans1" /> Ans A. : <span id="ans1"></span></p>
                                     <br />
                                     
-                                    <p><input type="radio" name="ans" /> Ans B. : France and India</p>
+                                    <p><input type="radio" id="radio_ans2" name="ans" value="ans2"/> Ans B. : <span id="ans2"></span></p>
                                 </div>
                                 <div class="col-md-6">
-                                    <p><input type="radio" name="ans" /> Ans C. : India and England</p>
+                                    <p><input type="radio" id="radio_ans3" name="ans" value="ans3"/> Ans C. : <span id="ans3"></span></p>
                                     <br />
                                     
-                                    <p><input type="radio" name="ans" /> Ans Ds. : India and Pakistan</p>
+                                    <p><input type="radio" id="radio_ans4" name="ans" value="ans4"/> Ans Ds. : <span id="ans4"></span></p>
                                 </div>
                             </div>
                         </div>
                         <div class="card-footer">
-                            <button class="btn btn-primary">Next</button>
+                            <button onclick="getans()" class="btn btn-primary">Next</button>
                         </div>
                     </div>
                 </div>
             </div>
+            <script>
+                
+            </script>
         </div>
     </body>
  </html>
