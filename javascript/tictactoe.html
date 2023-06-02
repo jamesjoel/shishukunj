@@ -1,0 +1,200 @@
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+        <script src="js/bootstrap.bundle.js"></script>
+
+        <style>
+            .card:hover{
+                background-color: rgb(64, 64, 64) !important;
+            }
+
+            .card h1{
+                font-size: 70px;
+                text-align: center;
+                margin-top: 20px;
+            }
+        </style>
+        <script>
+            var counter = true;
+
+            var winarr = [123, 231, 321, 312, 132, 213, 456, 465, 546, 564, 645, 654, 789, 798, 879, 897, 978, 987, 147, 174, 417, 471, 714, 741, 238, 283, 328, 382, 832, 823, 369, 396, 693, 639, 963, 936, 159, 195, 915, 951, 591, 519,  357, 375, 735, 753, 537, 573];
+
+            function game(a){
+                if(counter){
+                    document.getElementById("player1").style.backgroundColor = "red";
+                    document.getElementById("player2").style.backgroundColor = "transparent";
+                    document.getElementById(a).innerHTML = "X";
+                }else{
+                    document.getElementById("player2").style.backgroundColor = "red";
+                    document.getElementById("player1").style.backgroundColor = "transparent";
+                    document.getElementById(a).innerHTML = "O";
+                }
+                counter = !counter;
+
+                checkTile();
+            }   
+
+            function checkTile(){
+                var t1 = document.getElementById("tile1").innerHTML;
+                var t2 = document.getElementById("tile2").innerHTML;
+                var t3 = document.getElementById("tile3").innerHTML;
+                
+                var t4 = document.getElementById("tile4").innerHTML;
+                var t5 = document.getElementById("tile5").innerHTML;
+                var t6 = document.getElementById("tile6").innerHTML;
+                
+                var t7 = document.getElementById("tile7").innerHTML;
+                var t8 = document.getElementById("tile8").innerHTML;
+                var t9 = document.getElementById("tile9").innerHTML;
+
+                if(t1 !="" && t2 !="" && t3 !="") {
+                    if(t1=='X' && t2=='X' && t3=='X'){
+                        document.getElementById("winner").innerHTML = "Player 1 Win";
+                    }
+                    if(t1=='O' && t2=='O' && t3=='O'){
+                        document.getElementById("winner").innerHTML = "Player 2 Win";
+                    }
+                }
+                if(t4 !="" && t4 !="" && t6 !="") {
+                    if(t4=='X' && t5=='X' && t6=='X'){
+                        document.getElementById("winner").innerHTML = "Player 1 Win";
+                    }
+                    if(t4=='O' && t5=='O' && t6=='O'){
+                        document.getElementById("winner").innerHTML = "Player 2 Win";
+                    }
+                }
+                if(t7 !="" && t8 !="" && t9 !="") {
+                    if(t7=='X' && t8=='X' && t9=='X'){
+                        document.getElementById("winner").innerHTML = "Player 1 Win";
+                    }
+                    if(t7=='O' && t8=='O' && t9=='O'){
+                        document.getElementById("winner").innerHTML = "Player 2 Win";
+                    }
+                }
+
+                if(t1 !="" && t4 !="" && t7 !="") {
+                    if(t1=='X' && t4=='X' && t7=='X'){
+                        document.getElementById("winner").innerHTML = "Player 1 Win";
+                    }
+                    if(t1=='O' && t4=='O' && t7=='O'){
+                        document.getElementById("winner").innerHTML = "Player 2 Win";
+                    }
+                }
+
+                if(t2 !="" && t5 !="" && t8 !="") {
+                    if(t2=='X' && t5=='X' && t8=='X'){
+                        document.getElementById("winner").innerHTML = "Player 1 Win";
+                    }
+                    if(t2=='O' && t5=='O' && t8=='O'){
+                        document.getElementById("winner").innerHTML = "Player 2 Win";
+                    }
+                }
+
+                if(t3 !="" && t6 !="" && t9 !="") {
+                    if(t3=='X' && t6=='X' && t9=='X'){
+                        document.getElementById("winner").innerHTML = "Player 1 Win";
+                    }
+                    if(t3=='O' && t6=='O' && t9=='O'){
+                        document.getElementById("winner").innerHTML = "Player 2 Win";
+                    }
+                }
+                if(t1 !="" && t5 !="" && t9 !="") {
+                    if(t1=='X' && t5=='X' && t9=='X'){
+                        document.getElementById("winner").innerHTML = "Player 1 Win";
+                    }
+                    if(t1=='O' && t5=='O' && t9=='O'){
+                        document.getElementById("winner").innerHTML = "Player 2 Win";
+                    }
+                }
+                if(t3 !="" && t5 !="" && t7 !="") {
+                    if(t3=='X' && t5=='X' && t7=='X'){
+                        document.getElementById("winner").innerHTML = "Player 1 Win";
+                    }
+                    if(t3=='O' && t5=='O' && t7=='O'){
+                        document.getElementById("winner").innerHTML = "Player 2 Win";
+                    }
+                }
+
+
+            }
+
+
+        </script>
+
+    </head>
+    <body>
+        <div class="container-fluid bg-dark" style="height: 100px;">
+            <h1 class="text-center text-light" id="winner"></h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <h3 id="player1" style="float: left; padding: 0 50px; background-color: red;">Player 1 : X</h3>
+                    <h3 id="player2" style="float: left;  padding: 0 50px;">Player 2 : O</h3>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-6 offset-md-3 bg-info" style="height: 392px; border-radius: 10px; box-shadow : 0 0 20px #000;">
+                    <div class="row">
+                        <div class="col-md-4 m-0 p-0">
+                            <div onclick="game('tile1')" class="card bg-dark  border-0" style="height: 120px; border-radius: 0px !important;">
+                                <h1 id="tile1" class="text-light"></h1>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div onclick="game('tile2')" class="card bg-dark  border-0" style="height: 120px; border-radius: 0px !important;">
+                                <h1 id="tile2" class="text-light"></h1>
+                            </div>
+                        </div>
+                        <div class="col-md-4 m-0 p-0">
+                            <div onclick="game('tile3')" class="card bg-dark  border-0" style="height: 120px; border-radius: 0px !important;">
+                                <h1 id="tile3" class="text-light"></h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-4 m-0 p-0">
+                            <div onclick="game('tile4')" class="card bg-dark border-0" style="height: 120px; border-radius: 0px !important;">
+                                <h1 id="tile4" class="text-light"></h1>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div onclick="game('tile5')" class="card bg-dark  border-0" style="height: 120px; border-radius: 0px !important;">
+                                <h1 id="tile5" class="text-light"></h1>
+                            </div>
+                        </div>
+                        <div class="col-md-4 m-0 p-0">
+                            <div onclick="game('tile6')" class="card bg-dark  border-0" style="height: 120px; border-radius: 0px !important;">
+                                <h1 id="tile6" class="text-light"></h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-4 m-0 p-0" >
+                            <div onclick="game('tile7')" class="card bg-dark  border-0" style="height: 120px; border-radius: 0px !important;">
+                                <h1 id="tile7" class="text-light"></h1>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div onclick="game('tile8')" class="card bg-dark  border-0" style="height: 120px; border-radius: 0px !important;">
+                                <h1 id="tile8" class="text-light"></h1>
+                            </div>
+                        </div>
+                        <div class="col-md-4 m-0 p-0">
+                            <div onclick="game('tile9')" class="card bg-dark  border-0" style="height: 120px; border-radius: 0px !important;">
+                                <h1 id="tile9" class="text-light"></h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div style="text-align: center;">
+                <button onclick="location.reload()" type="button" class="btn btn-lg btn-primary mt-4">RESTART</button>
+            </div>
+        </div>
+    </body>
+</html>

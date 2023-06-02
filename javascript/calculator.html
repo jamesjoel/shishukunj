@@ -4,9 +4,54 @@
         <script src="js/bootstrap.bundle.js"></script>
 
         <script>
+            var z="";
+            var oldvalue=0;
+            var y="";
             function calc(a)
             {
+                console.log(z);
+                if(z!=""){
+                    
+                    document.getElementById("disp").value ="";
+                    z="";
+                }
                 document.getElementById("disp").value += a;
+            }
+            function ac(){
+                document.getElementById("disp").value ="";
+
+            }
+            function ope(x){
+                oldvalue = document.getElementById("disp").value;
+                z=x;
+                y=x;
+                
+            }
+            function ans(){
+                var curvalue = document.getElementById("disp").value;
+                if(y=='+'){
+                    
+                    var ans = parseFloat(oldvalue)+parseFloat(curvalue);
+                }
+                if(y=='-'){
+                    
+                    var ans = oldvalue-curvalue;
+                }
+                if(y=='/'){
+                    var ans = oldvalue/curvalue;
+                    
+                }
+                if(y=='*'){
+                    var ans = oldvalue*curvalue;
+
+                }
+
+                document.getElementById("disp").value = ans;
+            }
+
+            function plusemin(){
+                document.getElementById("disp").value = -document.getElementById("disp").value;
+                
             }
         </script>
 
@@ -16,7 +61,7 @@
         <div class="container mt-4">
             <div class="row">
                 <div class="col-md-4 offset-md-4 border border-info p-3">
-                    <input id="disp" type="text" class="form-control border border-dark" style="text-align: right;" />
+                    <input id="disp" type="text" class="form-control border border-dark" style="text-align: right; height : 50px; font-size: 25px;" />
                     <Br />
                     <div class="row">
                         <div class="col-md-3 my-1">
@@ -43,91 +88,91 @@
                         <div class="col-md-3 my-1">
                             <div class="d-grid">
 
-                                <button id="btnsum" onclick="calc(4)" class="btn btn-dark">+</button>
+                                <button id="btnsum" onclick="ope('+')" class="btn btn-dark">+</button>
                             </div>
                             
                         </div>
                         <div class="col-md-3 my-1">
                             <div class="d-grid">
 
-                                <button id="btn4" onclick="calc(5)" class="btn btn-dark">4</button>
+                                <button id="btn4" onclick="calc(4)" class="btn btn-dark">4</button>
                             </div>
                             
                         </div>
                         <div class="col-md-3 my-1">
                             <div class="d-grid">
 
-                                <button id="btn5" class="btn btn-dark">5</button>
+                                <button id="btn5" onclick="calc(5)" class="btn btn-dark">5</button>
                             </div>
                             
                         </div>
                         <div class="col-md-3 my-1">
                             <div class="d-grid">
 
-                                <button id="btn6" class="btn btn-dark">6</button>
+                                <button id="btn6" onclick="calc(6)" class="btn btn-dark">6</button>
                             </div>
                             
                         </div>
                         <div class="col-md-3 my-1">
                             <div class="d-grid">
 
-                                <button id="btnsub" class="btn btn-dark">-</button>
+                                <button id="btnsub" onclick="ope('-')" class="btn btn-dark">-</button>
                             </div>
                             
                         </div>
                         <div class="col-md-3 my-1">
                             <div class="d-grid">
 
-                                <button id="btn7" class="btn btn-dark">7</button>
+                                <button id="btn7" onclick="calc(7)" class="btn btn-dark">7</button>
                             </div>
                             
                         </div>
                         <div class="col-md-3 my-1">
                             <div class="d-grid">
 
-                                <button id="btn8" class="btn btn-dark">8</button>
+                                <button id="btn8" onclick="calc(8)" class="btn btn-dark">8</button>
                             </div>
                             
                         </div>
                         <div class="col-md-3 my-1">
                             <div class="d-grid">
 
-                                <button id="btn9" class="btn btn-dark">9</button>
+                                <button id="btn9" onclick="calc(9)" class="btn btn-dark">9</button>
                             </div>
                             
                         </div>
                         <div class="col-md-3 my-1">
                             <div class="d-grid">
 
-                                <button id="btndiv" class="btn btn-dark">/</button>
+                                <button id="btndiv" onclick="ope('/')" class="btn btn-dark">/</button>
                             </div>
                             
                         </div>
                         <div class="col-md-3">
                             <div class="d-grid my-1">
 
-                                <button id="btndot"  class="btn btn-dark">.</button>
+                                <button id="btndot" onclick="calc('.')" class="btn btn-dark">.</button>
                             </div>
                             
                         </div>
                         <div class="col-md-3">
                             <div class="d-grid my-1">
 
-                                <button id="btn0" class="btn btn-dark">0</button>
+                                <button id="btn0" onclick="calc(0)" class="btn btn-dark">0</button>
                             </div>
                             
                         </div>
                         <div class="col-md-3">
                             <div class="d-grid my-1">
 
-                                <button id="btnposi" class="btn btn-dark">+/-</button>
+                                <button id="btnposi" onclick="plusemin()" class="btn btn-dark">+/-</button>
                             </div>
                             
                         </div>
                         <div class="col-md-3">
                             <div class="d-grid my-1">
 
-                                <button id="btnmul" class="btn btn-dark">x</button>
+                                <button id="btnmul" onclick="ope('*')" class="btn btn-dark">x</button>
                             </div>
                             
                         </div>
@@ -140,12 +185,12 @@
                         </div>
                         <div class="col-md-6 my-2">
                             <div class="d-grid">
-                                <button id="btneq" class="btn btn-dark">=</button>
+                                <button id="btneq" onclick="ans()" class="btn btn-dark">=</button>
                             </div>
                         </div>
                         <div class="col-md-3 my-2">
                             <div class="d-grid">
-                                <button id="btnac" class="btn btn-dark">AC</button>
+                                <button id="btnac" onclick="ac()" class="btn btn-dark">AC</button>
                             </div>
                         </div>
                     </div>
