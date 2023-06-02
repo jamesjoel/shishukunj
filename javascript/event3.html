@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script>
+            var a = 150;
+            function demo(){
+                // console.log("***********")
+                a++;
+                document.getElementById("circle").style.height = a+"px";
+                document.getElementById("circle").style.width = a+"px";
+            }
+        </script>   
+        <style>
+            .circle{
+                height: 150px;
+                width: 150px;
+                background-color: #457845;
+                border-radius: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="circle" onmousemove="demo()" class="circle"></div>
+    </body>
+</html>

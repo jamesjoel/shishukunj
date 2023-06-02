@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+            function demo1(){
+                console.log("*************");
+            }
+            function demo2(){
+                console.log("&&&&&&&&&&&&&");
+            }
+            function demo3(){
+                return false;
+            }
+            function demo4(){
+                console.log("hello world");
+            }
+        </script>
+    </head>
+    <body oncontextmenu="return demo3()">
+        <button onclick="demo1()">OK</button>
+        <button ondblclick="demo2()">OK</button>
+        <div onmouseover="demo4()" style="height : 200px; width : 200px; background-color: red;"></div>
+    </body>
+</html>

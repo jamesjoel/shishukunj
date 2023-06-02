@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <script>
+            function demo(event){
+                if(event.keyCode==65)
+                    console.log("*********");
+            }
+
+            var x = true;
+            function show(){
+                if(x){
+                    document.getElementById("pass").setAttribute("type", "text");
+                    
+                }else{
+                    
+                    document.getElementById("pass").setAttribute("type", "password");
+                }
+
+                x = !x;
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" placeholder="Full Name" onkeydown="demo(event)"/>
+        <Br />
+        <br />
+        <input type="password" id="pass"/><button onclick="show()"><i class="fa fa-eye" aria-hidden="true"></i></button>
+    </body>
+</html>
